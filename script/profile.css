@@ -1,0 +1,217 @@
+
+/*	
+    Author   : Al Muhdil Karim
+    Site     : https://almudhilkarim.com
+    github   : https://github.com/jasonvortech/
+    telegram : @rocknroot
+    this template is used for learning purposes on course "basic web development" at karims public library 
+    https://almuhdilkarim.com
+*/
+
+/* =============================== */
+/* Reset  */
+/* =============================== */
+* { margin:0; padding: 0; }
+
+
+/* =============================== */
+/* General rules */
+/* =============================== */
+
+html { scroll-behavior: smooth; font-family: 'Roboto', sans-serif; }
+section { width: 100%; }
+img { width: 100%; object-fit: cover; }
+
+/* =============================== */
+/* Rules untuk heading dan teks */
+/* =============================== */
+
+h1, h2, h3 {
+    margin-bottom: 25px;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+    letter-spacing: 1.5px;
+}
+h1 { font-size: 30px; }
+h2 { font-size: 27px; }
+h3 { font-size: 24px; }
+p  { font-size: 16px; }
+a  { text-decoration: none; }
+   
+/* =============================== */
+/* Rules untuk Main Body */
+/* =============================== */
+
+#main {
+    background: hsl(238deg 85% 9% / 10%);
+    width: 80vw;
+    height: 100vh;
+    min-height: 100vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    justify-content: center;
+    align-content: center;
+}
+.background-image{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+.background-animated{ animation: latar1 20s infinite; }
+.background-animated-2{ animation: latar2 10s infinite; }
+
+/* Animasi untuk background utama */
+@keyframes latar1{
+    0%{ transform: scale(1); opacity: 1; }
+    50%{ transform: scale(1.3); opacity:0; }
+    100%{ transform: scale(1); opacity:1; }
+}
+@keyframes latar2{
+    0%{ transform: scale(1); opacity: 1; }
+    100%{ transform: scale(1.3); opacity:0; }
+}
+
+/* =============================== */
+/* Rules untuk Photo Profile       */
+/* =============================== */
+
+#foto-profil {
+    width: 90%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+#foto-profil img {
+    width: inherit;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+/* =============================== */
+/* Rules untuk Header              */
+/* =============================== */
+
+.nama-profil{
+    color: rgb(3 5 64 / 88%);
+    font-size: 35px;
+    margin-bottom: 10px;
+    margin-top: 17px;
+    padding-left: 23px;
+}
+.nama-profil span{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+header {
+    display: flex;
+    position: relative;
+}
+header nav {
+    height: 70px;
+    text-align: center;
+    padding-left: 70px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav a {
+    color: #000000;
+    font-weight: 700;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+/* ==================================================== */
+/* Rules untuk List Pengalaman, kualifikasi dan Riwayat */
+/* ==================================================== */
+
+.list-show{
+    height: auto;
+    opacity: 1;
+    animation: animasilist .5s;
+}
+.list-hide {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+.kolom-list {
+    width: 100%;
+    float: left;
+    display: inline-flex;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.list-tahun {
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #ff00ff; 
+    border: 1px solid rgb(169 0 255 / 20%);
+    border-radius: 7px;
+    height: 20px;
+}
+.list-judul {
+    color: #000;
+    font-size: 15px;
+    display: flex;
+    align-content: center;
+    padding-left: 25px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+.list-keterangan {
+    color: #000;
+    padding-left: 25px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* Animasi untuk pergantian menu */
+@keyframes animasilist{
+    0%{ transform: scale(.9); height: 0; opacity: 0; }
+    100%{ transform: scale(1); height: auto; opacity:1;}
+}
+
+/* =============================== */
+/* Rules untuk Footer */
+/* =============================== */
+
+footer{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 30% 70% ;
+}
+#download-resume{
+    clear: both;
+    display: block;
+    margin-top: 2rem;
+}
+.download-btn{
+    padding: 15px 25px;
+    background-color: #ff00ff;
+    color: #fff;
+    display: flex;
+    width: fit-content;
+    box-shadow: 1px 1px 10px #000;
+    border-radius: 7px;
+    margin-left: 25px;
+}
+#sosial-media{
+    margin-top: 2rem;
+    display: inline-flex;
+    list-style: none;
+}
+.sosial-media li { margin-left: 30px; }
+.icon-sosmed{ width: 50px; height: 50px;}
